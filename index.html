@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jordan Santos Catubig - Front-End Developer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-top: 20px;
+        }
+
+        header img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin: 0;
+            color: #000;
+        }
+
+        header h2 {
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin: 10px 0;
+            color: #555;
+        }
+
+        header p {
+            font-size: 1rem;
+            font-weight: 400;
+            color: #777;
+        }
+
+        nav {
+            margin: 20px 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            font-weight: 700;
+            color: #333;
+            margin: 0 15px;
+        }
+
+        nav a:hover {
+            color: #000;
+        }
+
+        section {
+            width: 100%;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            display: none; /* Hide all sections initially */
+        }
+
+        section.active {
+            display: block; /* Show the active section */
+        }
+
+        section h2 {
+            text-align: center;
+            font-size: 2rem;
+            color: #000;
+            margin-bottom: 15px;
+        }
+
+        section p {
+            text-align: center;
+            line-height: 1.6;
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .download-resume {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .download-resume a {
+            text-decoration: none;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: 700;
+            font-size: 1rem;
+        }
+
+        .download-resume a:hover {
+            background-color: #000;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 0.875rem;
+            color: #999;
+        }
+
+        .footer a {
+            color: #333;
+            text-decoration: none;
+            margin: 0 5px;
+        }
+
+        .footer a:hover {
+            color: #000;
+        }
+
+        .footer p {
+            margin: 5px 0;
+        }
+
+        .work-images {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .work-images img {
+            max-width: 48%;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .work-description {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .work-description h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .work-description p {
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* Styling for the contact social media links */
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            text-decoration: none;
+            font-size: 1.5rem;
+            color: #555;
+            padding: 10px;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #0077b5; /* Blue for Facebook and GitHub */
+            transform: scale(1.1);
+        }
+
+        .social-links a:nth-child(1):hover {
+            color: #4267B2; /* Facebook Blue */
+        }
+
+        .social-links a:nth-child(2):hover {
+            color: #333; /* GitHub Dark */
+        }
+
+        .social-links a:nth-child(3):hover {
+            color: #ea4335; /* Google Red (for email) */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="image.21.png" alt="Profile Picture">
+        <h1>Jordan Santos Catubig</h1>
+        <h2>Front-End Developer</h2>
+        <p>Crafting seamless digital experiences. One line of code at a time.</p>
+    </header>
+
+    <nav>
+        <a href="#" onclick="showSection('about')">About Me</a>
+        <a href="#" onclick="showSection('work')">View My Work</a>
+        <a href="#" onclick="showSection('contact')">Contact Me</a>
+    </nav>
+
+    <section id="about" class="active">
+        <h2>About Me</h2>
+        <p>
+            Hi! I am Jordan Catubig, a student from Camarines Norte State College (CNSC), currently taking Bachelor of Science in Information Systems. 
+            I am a passionate Front-End Developer with experience in creating dynamic and user-friendly web applications. Skilled in HTML, CSS, Java, 
+            and more, I specialize in developing solutions tailored to user needs.
+        </p>
+        <p>
+            What sets me apart? My creative problem-solving skills and a knack for efficient solutions.
+        </p>
+        <div class="download-resume">
+            <a href="Resume.pdf">Download Resume</a>
+        </div>
+    </section>
+
+    <section id="work">
+        <h2>My Work</h2>
+
+        <div class="work-images">
+            <img src="appdev1.jpg" alt="CNSC Project 1">
+            <img src="appdev2.jpg" alt="CNSC Project 2">
+        </div>
+
+        <div class="work-description">
+            <h3>CNSC Student Guide App</h3>
+            <p>
+                This project is designed to make the students' academic experience easy by providing quick access to everything included in a CNSC manual guide.
+                It's all about accessibility and clarity, helping students feel more connected to the college's vision and their own goals.
+            </p>
+            <p><strong>Technologies:</strong> Android Studio, Java</p>
+        </div>
+
+        <div class="work-images">
+            <img src="website1.jpg" alt="Meryenda Project 1">
+            <img src="website2.jpg" alt="Meryenda Project 2">
+        </div>
+
+        <div class="work-description">
+            <h3>Meryenda ni Tiyang Amy</h3>
+            <p>
+                The "Meryenda ni Tiyang Amy" project seeks to preserve and promote Filipino culinary heritage by creating an accessible and engaging online resource.
+                Through an interactive website, the project aims to reach a broad audience, sharing traditional recipes, cultural insights, and the joy of meryenda with food enthusiasts nationwide.
+                This digital platform is designed to increase business range and sales of Filipino food culture.
+            </p>
+            <p><strong>Technologies:</strong> HTML, CSS, JavaScript</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>If you'd like to collaborate or have any inquiries, feel free to reach out!</p>
+        <div class="social-links">
+            <a href="https://www.facebook.com/jordan.santos.7509836" target="_blank">Facebook</a>
+            <a href="https://github.com/jordancatubig21" target="_blank">GitHub</a>
+            <a href="mailto:jsantoscatubig@gmail.com">Email</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <nav>
+            <a href="#" onclick="showSection('about')">About Me</a>
+            <a href="#" onclick="showSection('work')">View My Work</a>
+            <a href="#" onclick="showSection('contact')">Contact Me</a>
+        </nav>
+        <div>
+            <a href="https://www.facebook.com/jordan.santos.7509836">Facebook</a> |
+            <a href="mailto:jsantoscatubig@gmail.com">Email</a>
+        </div>
+        <p>&copy; 2024 Jordan Santos Catubig. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+
+            // Show the selected section
+            const activeSection = document.getElementById(sectionId);
+            activeSection.classList.add('active');
+        }
+    </script>
+</body>
+</html>
